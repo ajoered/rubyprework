@@ -1,10 +1,12 @@
-for num in 1..100
-	if num % 3 == 0 && num % 5 == 0
+for n in 1..100
+	if n % 3 == 0 && n % 5 == 0
 		puts "FizzBuzz"
-	elsif num % 3 == 0
+	elsif n % 3 == 0
 		puts "Fizz"
-	elsif num % 5 == 0
+	elsif n % 5 == 0
 		puts "Buzz"
-	else puts num
+	else
+		puts n
 	end
 end
+
