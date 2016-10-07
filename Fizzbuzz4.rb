@@ -13,10 +13,11 @@ result = ""
 	if n.to_s.include? "1"
 		result << "Bang"
 	end
-	if n % 5 != 0 && n % 3 != 0
+	if n % 5 != 0 && n % 3 != 0 && n != 1
 		result << n.to_s
 	end
 end
 puts result
+
 
 
