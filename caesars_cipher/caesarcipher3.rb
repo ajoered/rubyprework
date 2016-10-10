@@ -3,15 +3,12 @@ def solve_cipher(input)
 input.chars.map do |x|
 	
 	new_value = x.ord + shift
-
-	if new_value > 122
-		new_value = 97 + new_value - 122 - 1
-	end
-	if new_value < 97
-		new_value = 122 - (97 - new_value) + 1
-	end
 	if x == " "
-   	new_value = " "
+   		new_value = " "
+	elsif new_value > 122
+		new_value = 97 + new_value - 122 - 1
+	elsif new_value < 97
+		new_value = 122 - (97 - new_value) + 1
 	end
 	
 	new_value.chr
