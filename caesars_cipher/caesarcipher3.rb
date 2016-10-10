@@ -1,4 +1,5 @@
-def solve_cipher(input, shift)
+def solve_cipher(input)
+	shift = -3
 input.chars.map do |x|
 	new_value = x.ord + shift
 	if x == " "
@@ -15,4 +16,4 @@ end.join
 end
 
 
-puts solve_cipher("p| uhdo qdph lv grqdog gxfn", -3)
+puts solve_cipher("p| uhdo qdph lv grqdog gxfn")
