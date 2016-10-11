@@ -7,8 +7,15 @@ class ShoppingCart
   def add_item(item)
     @items.push(item)
   end
-end
 
+  def checkout
+    sum = 0
+    @items.map do |item|
+      sum += item.price
+  end
+  puts sum
+end
+end
 
 class Item 
 attr_accessor(:price)
@@ -50,3 +57,4 @@ rice = Item.new("rice", 1)
 alvaros_cart.add_item(orange)
 alvaros_cart.add_item(banana)
 alvaros_cart.add_item(vacuum)
+alvaros_cart.checkout
