@@ -1,4 +1,5 @@
 class ShoppingCart
+  
   def initialize
     @items = []
   end
@@ -6,9 +7,18 @@ class ShoppingCart
   def add_item(item)
     @items.push(item)
   end
+
+  def checkout
+    sum = 0
+    @items.map do |item|
+      sum += item.price
+  end
+  puts sum
+end
 end
 
 class Item 
+attr_accessor(:price)
   def initialize(name, price)
       @name = name
       @price = price
@@ -37,13 +47,14 @@ class Fruit < Item
   end
 end
 
+alvaros_cart = ShoppingCart.new
 orange = Fruit.new("orange juice", 10)
 banana = Fruit.new("banana", 10)
 vacuum = Houseware.new("vacuum cleaner", 150)
 anchovies = Houseware.new("anchovies", 2)
 rice = Item.new("rice", 1)
 
-puts vacuum.price
-
-
-
+alvaros_cart.add_item(orange)
+alvaros_cart.add_item(banana)
+alvaros_cart.add_item(vacuum)
+alvaros_cart.checkout
