@@ -5,7 +5,6 @@ class ShoppingCart
 end
 
 class Item 
-  attr_accessor :price
   def initialize(name, price)
       @name = name
       @price = price
@@ -40,6 +39,7 @@ vacuum = Houseware.new("vacuum cleaner", 150)
 anchovies = Houseware.new("anchovies", 2)
 rice = Item.new("rice", 1)
 
-cart = ShoppingCart.new
+puts vacuum.price
+
 
 
